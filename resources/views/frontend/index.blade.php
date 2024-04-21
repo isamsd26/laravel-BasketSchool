@@ -36,7 +36,7 @@
                             Pendafataran</a> </li>
                 </ul>
                 <div class="d-flex align-items-center">
-                    <a href="features/login.php" class="btn btn-secondary ml-2 fs-5 text-white">Masuk</a>
+                    <a href="features/login.php" class="btn btn-outline-light ml-2 fs-5 text-dark">Masuk</a>
                     <a href="features/register.php" class="btn btn-light ml-3 fs-5">Daftar</a>
                 </div>
             </div>
@@ -48,44 +48,177 @@
         <div class="banner-overlay">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-sm-12">
+                    <div class="col-md-6 col-sm-12"> <img src="{{ asset('frontend/images/konten.png') }}"
+                            class="img-fluid wow fadeInUp" />
+                    </div>
+                    <div class="col-md-6 col-sm-12">
                         <div class="banner-text">
-                            <h2 class="white">Lets join with and play with us!</h2>
+                            <h2 class="white">Lets join and play with us!</h2>
                             <p class="banner-text white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 Curabitur hendrerit neque massa, sit amet tristique ante porta ut. In sodales et justo
                                 vel vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada
                                 fames ac turpis egestas.</p>
                             <ul>
-                                <li><a class="btn btn-primary btn-xl text-uppercase" href="#">Gabung sekarang</a>
+                                <li><a class="btn btn-light  text-uppercase rounded-pill" href="#">Gabung
+                                        sekarang</a>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-12"> <img src="{{ asset('frontend/images/ipon.png') }}"
-                            class="img-fluid wow fadeInUp" /> </div>
                 </div>
             </div>
         </div>
-        <span class="svg-wave"> <img class="svg-hero" src="{{ asset('frontend/images/applight-wave.svg') }}"> </span>
+
     </section>
+
+    <div class="container d-flex flex-column justify-content-center align-items-center" id="alasan">
+        <div class="container bg-white">
+            <div class="sectioner-header text-center mb-5">
+                <h3>About AKJ Basketball School</h3>
+                <span class="line"></span>
+            </div>
+            <div class="container-custom mt-1">
+                <div class="row">
+                    <!-- Div pertama untuk gambar -->
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <div class="position-relative clearfix">
+                            <img class="img-abs rounded" src="{{ asset('frontend/images/1.jpg') }}" alt="..." />
+
+                            <img class="img-abs rounded position-absolute" src="{{ asset('frontend/images/3.jpg') }}"
+                                alt="..." />
+                            <!-- Gambar kedua dipindah ke kiri -->
+                        </div>
+                    </div>
+
+                    <!-- Div kedua untuk konten -->
+                    <div class="col-md-6 order-1 order-md-2">
+                        <div class="fs-5">
+                            <div class="my-3">
+                                <p>Sudahkah kamu mendengar tentang AKJ Basketball, sekolah basket keren di Semarang? Di
+                                    sana,
+                                    bukan hanya soal bermain basket, tapi juga tentang petualangan yang menantang dan
+                                    pertumbuhan
+                                    pribadi yang luar biasa!
+                                </p>
+                                <p>Bayangkan, di AKJ Basketball, kamu akan diajari teknik-teknik basket terbaik oleh
+                                    para pelatih handal yang siap membimbingmu menjadi pemain basket yang hebat Mereka
+                                    tidak hanya mengajarkan cara melempar bola atau melakukan dribble, tetapi juga
+                                    membekalimu dengan keterampilan taktis dan fisik yang akan membuatmu unggul di
+                                    lapangan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <!-------Banner End------->
 
     <!-------About End------->
+
+    <section class="feature section-padding mt-5" data-scroll-index='2'>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sectioner-header text-center">
+                        <h3>Kenapa Harus Kami?</h3>
+                        <span class="line"></span> <!-- Keep this in its original position -->
+                        <p>Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem
+                            faucibus, vestibulum ante in, pharetra ante.</p>
+                    </div>
+
+                    <div class="section-content text-center">
+                        <!-- Row Pertama: 3 Kolom -->
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12">
+                                <div class="single-feature wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="text-right">
+                                        <h5>Fast Processing</h5>
+                                        <div>
+                                            <img class="img-fluid rounded"
+                                                src="{{ asset('frontend/images/UI/konten1.png') }}" alt="..." />
+                                            <!-- SVG positioned here -->
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididugnt ut labore.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="single-feature wow fadeInUp" data-wow-delay="0.4s">
+                                    <div class="text-right">
+                                        <h5>Low Power Consuming</h5>
+                                        <div>
+                                            <img class="img-fluid rounded"
+                                                src="{{ asset('frontend/images/UI/konten2.png') }}" alt="..." />
+                                            <!-- SVG positioned here -->
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididugnt ut labore.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="single-feature wow fadeInUp" data-wow-delay="0.6s">
+                                    <div class="text-right">
+                                        <h5>Wifi Compatibility</h5>
+                                        <div>
+                                            <img class="img-fluid rounded"
+                                                src="{{ asset('frontend/images/UI/konten3.png') }}" alt="..." />
+                                            <!-- SVG positioned here -->
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididugnt ut labore.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row Kedua: 2 Kolom -->
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="single-feature wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="text-left">
+                                        <h5>Regular Updates</h5>
+                                        <div>
+                                            <img class="img-fluid rounded"
+                                                src="{{ asset('frontend/images/UI/konten4.png') }}" alt="..." />
+                                            <!-- SVG positioned here -->
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididugnt ut labore.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="single-feature wow fadeInUp" data-wow-delay="0.4s">
+                                    <div class="text-left">
+                                        <h5>Save Money</h5>
+                                        <div>
+                                            <img class="img-fluid rounded"
+                                                src="{{ asset('frontend/images/UI/konten5.png') }}" alt="..." />
+                                            <!-- SVG positioned here -->
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididugnt ut labore.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <section class="about section-padding prelative" data-scroll-index='1'>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="sectioner-header text-center">
-                        <h3>About AKJ Basketball School</h3>
-                        <span class="line"></span>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia possimus praesentium in iure
-                            iusto quos, reiciendis qui, ex obcaecati beatae consectetur rem, dicta veritatis aspernatur
-                            explicabo. Vel corporis ipsam voluptates!
-                            Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem
-                            faucibus, vestibulum ante in, pharetra ante.</p>
-                    </div>
+
                     <div class="section-content text-center">
                         <div class="row">
                             <div class="col-md-4">
@@ -123,87 +256,6 @@
         </div>
     </section>
     <!-------About End------->
-
-    <section class="feature section-padding" data-scroll-index='2'>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="sectioner-header text-center">
-                        <h3>Kenapa Harus Kami? </h3>
-                        <span class="line"></span>
-                        <p>Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem
-                            faucibus, vestibulum ante in, pharetra ante.</p>
-                    </div>
-                    <div class="section-content text-center">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-12">
-                                <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
-                                    <div class="media-body text-right media-right-margin">
-                                        <h5>Fast Processing</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididugnt ut labore</p>
-                                    </div>
-                                    <div class="media-right icon-border"> <span class="fa fa-bolt"
-                                            aria-hidden="true"></span> </div>
-                                </div>
-                                <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
-                                    <div class="media-body text-right media-right-margin">
-                                        <h5>Low Power Consuming</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididugnt ut labore</p>
-                                    </div>
-                                    <div class="media-right icon-border"> <span class="fa fa-battery-full"
-                                            aria-hidden="true"></span> </div>
-                                </div>
-                                <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
-                                    <div class="media-body text-right media-right-margin">
-                                        <h5>Wifi Compatibility</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididugnt ut labore</p>
-                                    </div>
-                                    <div class="media-right icon-border"> <span class="fa fa-wifi"
-                                            aria-hidden="true"></span> </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 d-none d-md-block d-lg-block">
-                                <div class="feature-mobile"> <img src="{{ asset('frontend/images/akj.png') }}"
-                                        class="img-fluid wow fadeInUp" /> </div>
-                            </div>
-                            <div class="col-md-4 col-sm-12">
-                                <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
-                                    <div class="media-left icon-border media-right-margin"> <span
-                                            class="fa fa-check-double" aria-hidden="true"></span> </div>
-                                    <div class="media-body text-left">
-                                        <h5>Regular Updates</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididugnt ut labore</p>
-                                    </div>
-                                </div>
-                                <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
-                                    <div class="media-left icon-border media-right-margin"> <span
-                                            class="fa fa-dollar-sign" aria-hidden="true"></span> </div>
-                                    <div class="media-body text-left">
-                                        <h5>Save Money</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididugnt ut labore</p>
-                                    </div>
-                                </div>
-                                <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
-                                    <div class="media-left icon-border media-right-margin"> <span class="fa fa-hdd"
-                                            aria-hidden="true"></span> </div>
-                                    <div class="media-body text-left">
-                                        <h5>Unlimited Storage</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididugnt ut labore</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-------Video Start------->
     <section class="video-section prelative text-center white">
