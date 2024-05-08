@@ -39,17 +39,21 @@ h6 {
 .sticky + .content {
     padding-top: 60px;
 }
+.content-gal{
+    padding-top: 100px;
+}
 .navbar {
     position: fixed;
     right: 0;
     left: 0;
+    top: 0;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
     min-height: 50px;
     line-height: 50px;
     background: #8001FF;
-    z-index: 1030;
+    z-index: 1000;
     box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.1);
 }
 .navbar .active {
@@ -358,6 +362,17 @@ h6 {
     height: auto;
 }
 
+.img-galeri {
+    max-width: 100%;
+    width: 340px;
+    height: 245px;
+}
+.img-news {
+    max-width: 100%;
+    width: 380px;
+    height: 270px;
+}
+
 .img-abs{
     width: 300px;
     height: auto;
@@ -365,20 +380,31 @@ h6 {
     left: 100px; 
     z-index: 1;
 }
+.img-ul{
+    width: 150px;
+    height: 80px;
+}
 .custom-img {
     max-width: 500px;
     max-height: 300px;
     width: auto;
     height: auto;
 }
-
-@media screen and (max-width: 1200px){
+.text-custom{
+    text-align: justify;
+}
+@media screen and (max-width: 1280px){
     .img-abs{
     width: 250px;
     height: auto;
     top: 100px; 
     left: 100px; 
     z-index: 1;
+    }
+    .img-galeri{
+        max-width: 100%;
+    width: 250px;
+    height: 145px;
     }
 }
 #portfolio .portfolio-item {
@@ -816,6 +842,10 @@ input {
     background: #7a60ff;
     background: linear-gradient(to left, #7a60ff, #cd9ffa);
     cursor: pointer;
+}
+.t-line {
+    border-top:  3px solid #000; 
+    margin: 10px 0; 
 }
 .contact-info {
     padding: 2rem 2rem 1rem;
