@@ -2,42 +2,51 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AKJ Basketball School</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>AKJ Basketbal School</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/img/Logo_AKJ_Basketball.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{{ asset('frontend/css/animate.css') }}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/style.css') }}" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <!-- Font Google -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg" id="navbar">
-        <div class="container"> <a class="navbar-brand navbar-logo" href="#"> <img
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand navbar-logo" href="#"> <img
                     src="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}" alt="logo" class="logo-1"
-                    width="50" height="50"> </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
-                    class="fas fa-bars"></span> </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">Home</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('berita') }}" data-scroll-nav="1">Berita</a> </li>
+                    width="50" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('index') }}" data-scroll-nav="0">Home</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('berita') }}"
+                            data-scroll-nav="1">Berita</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('jadwal') }}" data-scroll-nav="3">Jadwal</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">Galeri</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">Jadwal</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">Informasi
                             Pendafataran</a> </li>
                 </ul>
-                <div class="d-flex align-items-center">
-                    <a href="features/login.php" class="btn btn-outline-light ml-2 fs-5 text-white">Masuk</a>
-                    <a href="features/register.php" class="btn btn-light ml-3 fs-5">Daftar</a>
+                <div class="d-flex justify-content-center">
+                    <a href="features/login.php" class="btn btn-outline-light ms-2 fs-5 text-white">Masuk</a>
+                    <a href="features/register.php" class="btn btn-light ms-3 fs-5">Daftar</a>
                 </div>
             </div>
         </div>
@@ -134,7 +143,7 @@
                             <div class="col-md-4 col-sm-12">
                                 <div class="single-feature wow fadeInUp" data-wow-delay="0.2s">
                                     <div class="text-right">
-                                        <h5>Fast Processing</h5>
+                                        <h5>Kualitas Pelatihan</h5>
                                         <div>
                                             <img class="img-fluid rounded"
                                                 src="{{ asset('frontend/images/UI/konten1.png') }}" alt="..." />
@@ -148,7 +157,7 @@
                             <div class="col-md-4 col-sm-12">
                                 <div class="single-feature wow fadeInUp" data-wow-delay="0.4s">
                                     <div class="text-right">
-                                        <h5>Low Power Consuming</h5>
+                                        <h5>Fasilitas Modern</h5>
                                         <div>
                                             <img class="img-fluid rounded"
                                                 src="{{ asset('frontend/images/UI/konten2.png') }}" alt="..." />
@@ -162,7 +171,7 @@
                             <div class="col-md-4 col-sm-12">
                                 <div class="single-feature wow fadeInUp" data-wow-delay="0.6s">
                                     <div class="text-right">
-                                        <h5>Wifi Compatibility</h5>
+                                        <h5>Kopmetensi Rutin</h5>
                                         <div>
                                             <img class="img-fluid rounded"
                                                 src="{{ asset('frontend/images/UI/konten3.png') }}" alt="..." />
@@ -177,10 +186,11 @@
 
                         <!-- Row Kedua: 2 Kolom -->
                         <div class="row mt-4 ">
-                            <div class="col-4">
-                                <div class="single-feature wow fadeInUp" data-wow-delay="0.2s">
-                                    <div class="text-left">
-                                        <h5>Regular Updates</h5>
+                            <div class="col"></div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="single-feature wow fadeInUp" data-wow-delay="0.6s">
+                                    <div class="text-right">
+                                        <h5>Pengembangan karakter</h5>
                                         <div>
                                             <img class="img-fluid rounded"
                                                 src="{{ asset('frontend/images/UI/konten4.png') }}" alt="..." />
@@ -191,24 +201,25 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <div class="single-feature wow fadeInUp" data-wow-delay="0.4s">
-                                    <div class="text-left">
-                                        <h5>Save Money</h5>
-                                        <div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="single-feature wow fadeInUp" data-wow-delay="0.6s">
+                                    <div class="text-right">
+                                        <h5>Komunitas Solid</h5>
+                                        <<div>
                                             <img class="img-fluid rounded"
                                                 src="{{ asset('frontend/images/UI/konten5.png') }}" alt="..." />
                                             <!-- SVG positioned here -->
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididugnt ut labore.</p>
                                     </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididugnt ut labore.</p>
                                 </div>
                             </div>
                         </div>
+                        <div class="col"></div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -218,147 +229,36 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
+                    <h1 class="mt-4 text-center">Berita Terbaru</h1>
                     <div class="section-content text-center">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="icon-box wow fadeInUp" data-wow-delay="0.2s"> <img
-                                        src="{{ asset('frontend/images/slider/b-1.jpg') }}"
-                                        style="height: 200px; width: 200px;">
-                                    <h5>Support</h5>
-                                    <p>Phasellus lobortis justo a magna facilisis, in commodo tellus rutrum. Sed vitae
-                                        condimentum nulla.</p>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-sm-6 mb-4">
+                                <!-- Portfolio item 1-->
+                                <div class="portfolio-item">
+                                    <a class="portfolio-link" href="#portfolioModal1">
+                                        <img class="img-galeri rounded" src="{{ asset('frontend/images/2.jpg') }}"
+                                            alt="..." />
+                                    </a>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <img
-                                        src="{{ asset('frontend/images/slider/b-2.jpg') }}"
-                                        style="height: 200px; width: 200px;">
-                                    <h5>Cross Platform</h5>
-                                    <p>Phasellus lobortis justo a magna facilisis, in commodo tellus rutrum. Sed vitae
-                                        condimentum nulla.</p>
+                            <div class="col-lg-4 col-sm-6 mb-4">
+                                <!-- Portfolio item 2-->
+                                <div class="portfolio-item">
+                                    <a class="portfolio-link" href="#portfolioModal2">
+                                        <img class="img-galeri rounded" src="{{ asset('frontend/images/2.jpg') }}"
+                                            alt="..." />
+                                    </a>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <img
-                                        src="{{ asset('frontend/images/slider/b-3.jpg') }}"
-                                        style="height: 200px; width: 200px;">
-                                    <h5>Fast</h5>
-                                    <p>Phasellus lobortis justo a magna facilisis, in commodo tellus rutrum. Sed vitae
-                                        condimentum nulla.</p>
-                                </div>
-                            </div>
+
                         </div>
-                        <a href="#" class="about-btn">Learn More</a>
+                        <a href="{{ route('berita') }}" class="about-btn">Lihat Berita Lainnya</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-------About End------->
-
-    <!-------Video Start------->
-    <section class="video-section prelative text-center white">
-        <div class="section-padding video-overlay">
-            <div class="container">
-                <h3>Watch Now</h3>
-                <i class="fa fa-play" id="video-icon" aria-hidden="true"></i>
-                <div class="video-popup">
-                    <div class="video-src">
-                        <div class="iframe-src">
-                            <iframe src="https://www.youtube.com/embed/Ku52zNnft8k?rel=0&amp;showinfo=0"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-------Video End------->
-    <div id="carouselExampleIndicators" class="container carousel slide my-5 py-3 bg-white" data-ride="carousel">
-        <h1 class="mt-4">Berita Terbaru</h1>
-        <div class="carousel-inner mt-5">
-            <div class="carousel-item active">
-                <div class="row justify-content-center">
-                    <div class="col-md-4">
-                        <div class="text-center">
-                            <img src="{{ asset('frontend/images/slider/b-1.jpg') }}" class="d-block mx-auto mb-3"
-                                style="height: 300px; width: 300px; object-fit: cover;" alt="Slide 1">
-                            <h5 class="mt-3">Header Slide 1</h5>
-                            <p class="mt-3">Description for Slide 1</p>
-                            <button class="btn btn-outline-dark" style="background-color: #b7821d;">Learn
-                                More</button>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="text-center">
-                            <img src="{{ asset('frontend/images/slider/b-2.jpg') }}" class="d-block mx-auto mb-3"
-                                style="height: 300px; width: 300px; object-fit: cover;" alt="Slide 2">
-                            <h5 class="mt-3">Header Slide 2</h5>
-                            <p class="mt-3">Description for Slide 2</p>
-                            <button class="btn btn-outline-dark" style="background-color: #b7821d;">Learn
-                                More</button>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="text-center">
-                            <img src="{{ asset('frontend/images/slider/b-3.jpg') }}" class="d-block mx-auto mb-3"
-                                style="height: 300px; width: 300px; object-fit: cover;" alt="Slide 3">
-                            <h5 class="mt-3">Header Slide 3</h5>
-                            <p class="mt-3">Description for Slide 3</p>
-                            <button class="btn btn-outline-dark" style="background-color: #b7821d;">Learn
-                                More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="row justify-content-center">
-                    <div class="col-md-4">
-                        <div class="text-center">
-                            <img src="{{ asset('frontend/images/slider/b-1.jpg') }}" class="d-block mx-auto mb-3"
-                                style="height: 300px; width: 300px; object-fit: cover;" alt="Slide 1">
-                            <h5 class="mt-3">Header Slide 4</h5>
-                            <p class="mt-3">Description for Slide 4</p>
-                            <button class="btn btn-outline-dark" style="background-color: #b7821d;">Learn
-                                More</button>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="text-center">
-                            <img src="{{ asset('frontend/images/slider/b-2.jpg') }}" class="d-block mx-auto mb-3"
-                                style="height: 300px; width: 300px; object-fit: cover;" alt="Slide 2">
-                            <h5 class="mt-3">Header Slide 5</h5>
-                            <p class="mt-3">Description for Slide 5</p>
-                            <button class="btn btn-outline-dark" style="background-color: #b7821d;">Learn
-                                More</button>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="text-center">
-                            <img src="{{ asset('frontend/images/slider/b-3.jpg') }}" class="d-block mx-auto mb-3"
-                                style="height: 300px; width: 300px; object-fit: cover;" alt="Slide 3">
-                            <h5 class="mt-3">Header Slide 6</h5>
-                            <p class="mt-3">Description for Slide 6 </p>
-                            <button class="btn btn-outline-dark" style="background-color: #b7821d;">Learn
-                                More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Add other carousel items here -->
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"
-            style="left: 0;">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"
-            style="right: 0;">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden text-dark">Next</span>
-        </a>
-    </div>
 
     <!-------FAQ Start------->
     <section class="faq section-padding prelative" class="page-section bg-light" id="portfolio"
@@ -447,7 +347,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -541,14 +440,14 @@
     <footer class="footer">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pb-3 pt-5 border-top custom-footer-bg text-white">
             <div class="col mb-3 d-flex flex-column align-items-center justify-content-center">
-                <a class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none ml-4">
-                    <svg class="bi mr-2" width="40" height="32">
+                <a class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none me-4">
+                    <svg class="bi me-2" width="40" height="32">
                         <use xlink:href="#bootstrap" />
                     </svg>
                     <img src="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}" alt="Logo AKJ Semarang"
-                        height="50" class="d-inline-block align-top mr-2">
+                        height="50" class="d-inline-block align-top me-2">
                 </a>
-                <p class="mb-0 ml-5 text-dark">
+                <p class="mb-0 me-5 text-dark">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quo, pariatur dolorem
                     recusandae omnis impedit. Reiciendis quod repellat officia doloribus deserunt!
                 </p>
@@ -589,8 +488,6 @@
             <div class="col"></div>
         </div>
     </footer>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
 
     <script>
         $(document).ready(function() {
@@ -639,9 +536,9 @@
     </script>
 
     <!-- Bootstrap core JS-->
-   
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <!-- scrollIt js -->
     <script src="{{ asset('frontend/js/scrollIt.min.js') }}"></script>

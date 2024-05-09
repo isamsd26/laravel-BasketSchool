@@ -24,6 +24,7 @@ Route::get('/', function () {
 Route::get('/', [UserController::class, 'home'])->name('index');
 Route::get('/about', [UserController::class, 'about'])->name('about');
 Route::get('/berita', [UserController::class, 'berita'])->name('berita');
+Route::get('/jadwal', [UserController::class, 'jadwal'])->name('jadwal');
 Route::get('/contact', [UserController::class, 'contact'])->name('contact');
 
 Route::get('/dashboard', function () {

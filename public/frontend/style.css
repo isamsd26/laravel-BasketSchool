@@ -52,12 +52,12 @@ h6 {
     padding-right: 0;
     min-height: 50px;
     line-height: 50px;
-    background: #8001FF;
+    background: #7834BE;
     z-index: 1000;
     box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.1);
 }
 .navbar .active {
-    color: #5f0099 !important;
+    color: #7834BE !important;
 }
 .navbar .navbar-brand {
 }
@@ -230,16 +230,16 @@ h6 {
     margin: 0 auto;
 }
 .about-btn {
-    color: #8e1efc;
+    color: #5E43D8;
     padding: 10px 40px;
-    border: 2px solid #8e1efc;
+    border: 2px solid #5E43D8;
     border-radius: 7px;
     margin-top: 30px;
     display: inline-block;
     font-size: 18px;
 }
 .about-btn:hover {
-    background: #8e1efc;
+    background: #5E43D8;
     color: #ffffff;
     text-decoration: none;
 }
@@ -390,8 +390,42 @@ h6 {
     width: auto;
     height: auto;
 }
+.img-logo {
+    max-width: 100%;
+    width: 150px;
+    height: 150px;
+}
 .text-custom{
     text-align: justify;
+}
+.text-logo{
+    font-size: 70px;
+    font-weight: 700;
+}
+.card-custom{
+    max-width: 100%;
+    width: 1130px;
+    height: 265px;
+}
+.margin-logo{
+    margin-top: 100px;
+}
+.margin-jad{
+    margin-left: 100px;
+}
+.card-kecil{
+    width: 265px;
+    height: 50px;
+    position: absolute; 
+    top: -25px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 10;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+    font-weight: 800;
+    background-color: #FFC73A;
 }
 @media screen and (max-width: 1280px){
     .img-abs{
@@ -813,7 +847,6 @@ input {
     padding: 0 1rem;
     background: #fff;
     border-radius: 30px;
-    margin-bottom: 1rem;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -911,7 +944,7 @@ input {
 @media all and (max-width: 991px) {
     .navbar .navbar-collapse {
         overflow: auto;
-        background: rgb(213, 198, 221);
+       
         color: #fff !important;
         text-align: center;
         padding: 10px 0;
@@ -1031,6 +1064,20 @@ input {
     z-index: 1;
     margin-right: 50px;
     }
+    .card-kecil{
+    width: 150px;
+    height: 50px;
+    position: absolute; 
+    top: -25px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 10;
+    justify-content: center;
+    text-align: center;
+    font-size: small;
+    font-weight: 800;
+    background-color: #FFC73A;
+    }
     .position-relative {
     text-align: center; /* Memastikan gambar berada di tengah */
     }
@@ -1044,5 +1091,42 @@ input {
 
     .order-1 {
         order: 2; /* Memastikan konten kedua berada di bawah gambar */
+    }
+}
+@media all and (max-width: 550px){
+    .img-logo {
+    max-width: 100%;
+    width: 100px;
+    height: 100px;
+    }
+    .text-logo{
+    font-size: 30px;
+    font-weight: 700;
+    }
+    .card-custom{
+    max-width: 100%;
+    width: 1130px;
+    height: 150px;
+    }
+}
+@media all and (max-width: 450px){
+ .card-kecil{
+    width: 100px;
+    height: 30px;
+    position: absolute; 
+    top: -15px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 10;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 800;
+    background-color: #FFC73A;
+    }
+    .img-logo {
+    max-width: 100%;
+    width: 70px;
+    height: 70px;
     }
 }

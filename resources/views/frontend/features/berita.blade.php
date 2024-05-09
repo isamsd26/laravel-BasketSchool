@@ -2,43 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AKJ Basketball School</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>AKJ Basketbal School</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/img/Logo_AKJ_Basketball.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{{ asset('frontend/css/animate.css') }}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/style.css') }}" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <!-- Font Google -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
 
 <body>
     <!-- Navbar dengan posisi tetap -->
-    <nav class="navbar navbar-expand-lg" id="navbar">
-        <div class="container"> <a class="navbar-brand navbar-logo" href="#"> <img
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand navbar-logo" href="#"> <img
                     src="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}" alt="logo" class="logo-1"
-                    width="50" height="50"> </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
-                    class="fas fa-bars"></span> </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+                    width="50" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item"> <a class="nav-link" href="{{ route('index') }}" data-scroll-nav="0">Home</a>
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('berita') }}"
                             data-scroll-nav="1">Berita</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('jadwal') }}" data-scroll-nav="3">Jadwal</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">Galeri</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">Jadwal</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">Informasi
                             Pendafataran</a> </li>
                 </ul>
                 <div class="d-flex align-itecenter">
-                    <a href="features/login.php" class="btn btn-outline-light ml-2 fs-5 text-white">Masuk</a>
-                    <a href="features/register.php" class="btn btn-light ml-3 fs-5">Daftar</a>
+                    <a href="features/login.php" class="btn btn-outline-light ms-2 fs-5 text-white">Masuk</a>
+                    <a href="features/register.php" class="btn btn-light ms-3 fs-5">Daftar</a>
                 </div>
             </div>
         </div>
@@ -79,7 +85,8 @@
                                     </a>
                                     <div class="portfolio-caption">
                                         <div class="portfolio-caption-heading">Threads</div>
-                                        <div class="portfolio-caption-subheading text-muted">Lorem ipsum dolor sit, amet
+                                        <div class="portfolio-caption-subheading text-muted">Lorem ipsum dolor sit,
+                                            amet
                                             consectetur adipisicing elit. Enim asperiores quis explicabo earum neque
                                             suscipit quaerat. Corrupti, vel cum quam ipsa eius vero architecto quas ea
                                             blanditiis magni eaque voluptatem!</div>
@@ -95,10 +102,9 @@
                             <h3>Cari Berita</h3>
                             <hr class="t-line">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Cari Berita Terbaru"
+                                <input type="text" class="form-control " placeholder="Cari Berita Terbaru"
                                     aria-label="Cari Berita Terbaru" aria-describedby="button-addon2">
                                 <a class="btn btn-outline-secondary" type="button" id="button-addon2">
-                                    Search
                                     <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
                                 </a>
                             </div>
@@ -108,7 +114,7 @@
                                 <li class="d-flex align-items-center mb-3">
                                     <!-- Menggunakan d-flex untuk menempatkan gambar dan teks -->
                                     <img src="{{ asset('frontend/images/1.jpg') }}" alt="Gambar 1"
-                                        class="img-ul rounded mr-3"> <!-- Gambar di kiri -->
+                                        class="img-ul rounded me-3"> <!-- Gambar di kiri -->
                                     <div> <!-- Keterangan di kanan -->
                                         <h6>Header 1</h6>
                                         <p>Ini adalah keterangan untuk item 1. Isi konten dan deskripsi yang relevan.
@@ -118,7 +124,7 @@
                                 <!-- Item 2 -->
                                 <li class="d-flex align-items-center mb-3">
                                     <img src="{{ asset('frontend/images/2.jpg') }}" alt="Gambar 2"
-                                        class="img-ul rounded mr-3">
+                                        class="img-ul rounded me-3">
                                     <div>
                                         <h6>Header 2</h6>
                                         <p>Ini adalah keterangan untuk item 2. Isi konten dan deskripsi yang
@@ -129,7 +135,7 @@
                                 <!-- Item 3 -->
                                 <li class="d-flex align-items-center mb-3">
                                     <img src="{{ asset('frontend/images/3.jpg') }}" alt="Gambar 3"
-                                        class="img-ul rounded mr-3">
+                                        class="img-ul rounded me-3">
                                     <div>
                                         <h6>Header 3</h6>
                                         <p>Ini adalah keterangan untuk item 3. Isi konten dan deskripsi yang relevan.
@@ -159,14 +165,14 @@
     <footer class="footer">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pb-3 pt-5 border-top custom-footer-bg text-white">
             <div class="col mb-3 d-flex flex-column align-items-center justify-content-center">
-                <a class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none ml-4">
-                    <svg class="bi mr-2" width="40" height="32">
+                <a class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none ms-4">
+                    <svg class="bi me-2" width="40" height="32">
                         <use xlink:href="#bootstrap" />
                     </svg>
                     <img src="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}" alt="Logo AKJ Semarang"
-                        height="50" class="d-inline-block align-top mr-2">
+                        height="50" class="d-inline-block align-top me-2">
                 </a>
-                <p class="mb-0 ml-5 text-dark">
+                <p class="mb-0 ms-5 text-dark">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quo, pariatur dolorem
                     recusandae omnis impedit. Reiciendis quod repellat officia doloribus deserunt!
                 </p>
@@ -209,12 +215,13 @@
     </footer>
 
     <!-- Script -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <!-- scrollIt js -->
     <script src="{{ asset('frontend/js/scrollIt.min.js') }}"></script>
     <script src="{{ asset('frontend/js/wow.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/script.js') }}"></script>
     <script>
         wow = new WOW();
         wow.init();
