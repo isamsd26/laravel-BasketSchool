@@ -7,7 +7,7 @@
     <meta name="author" content="" />
     <title>AKJ Basketbal School</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="../assets/img/Logo_AKJ_Basketball.png" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -22,7 +22,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" id="navbar">
         <div class="container">
             <a class="navbar-brand navbar-logo" href="#"> <img
                     src="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}" alt="logo" class="logo-1"
@@ -35,18 +35,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('index') }}" data-scroll-nav="0">Home</a>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('profil') }}" data-scroll-nav="0">Profil</a>
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('berita') }}"
                             data-scroll-nav="1">Berita</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('jadwal') }}" data-scroll-nav="3">Jadwal</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">Galeri</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('jadwal') }}"
+                            data-scroll-nav="3">Jadwal</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('galeri') }}" data-scroll-nav="2">Galeri</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">Informasi
                             Pendafataran</a> </li>
                 </ul>
-                <div class="d-flex justify-content-center">
-                    <a href="features/login.php" class="btn btn-outline-light ms-2 fs-5 text-white">Masuk</a>
-                    <a href="features/register.php" class="btn btn-light ms-3 fs-5">Daftar</a>
+                <div class="d-flex align-itecenter">
+                    <a href="{{ route('login') }}" class="btn btn-outline-light ms-2 fs-5">Masuk</a>
+                    <a href="{{ route('register') }}" class="btn btn-light ms-3 fs-5">Daftar</a>
                 </div>
             </div>
         </div>
@@ -57,10 +58,10 @@
         <div class="banner-overlay">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-sm-12"> <img src="{{ asset('frontend/images/konten.png') }}"
-                            class="img-fluid wow fadeInUp" />
-                    </div>
                     <div class="col-md-6 col-sm-12">
+                        <img src="{{ asset('frontend/images/konten.png') }}" class="img-akj wow fadeInUp " />
+                    </div>
+                    <div class="col-md-6 col-sm-12 ps-5">
                         <div class="banner-text">
                             <h2 class="white">Lets join and play with us!</h2>
                             <p class="banner-text white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -76,7 +77,6 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <div class="container d-flex flex-column justify-content-center align-items-center" id="alasan">
@@ -487,7 +487,20 @@
             <div class="col"></div>
         </div>
     </footer>
+    <script>
+        window.addEventListener("scroll", function() {
+            const navbar = document.getElementById("navbar");
+            const stickyPoint = 50;
 
+            if (window.pageYOffset > stickyPoint) {
+                navbar.classList.remove("navbar-transparent");
+                navbar.classList.add("navbar-solid");
+            } else {
+                navbar.classList.remove("navbar-solid");
+                navbar.classList.add("navbar-transparent");
+            }
+        });
+    </script>
     <script>
         $(document).ready(function() {
             // Atur jumlah slide yang ditampilkan berdasarkan ukuran layar

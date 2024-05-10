@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,12 @@ use App\Http\Controllers\UserController;
 |
 */
 
+// route untuk login , lo out, dan register
 route::get('/user/logout', [UserController::class, 'destroy'])->name('admin.logout');
+Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('login');
+Route::post('/login', [AuthenticatedSessionController::class, 'store']);
+Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
+Route::post('/register', [RegisteredUserController::class, 'store']);
 
 Route::get('/', function () {
     return view('frontend.index');
@@ -25,7 +32,8 @@ Route::get('/', [UserController::class, 'home'])->name('index');
 Route::get('/about', [UserController::class, 'about'])->name('about');
 Route::get('/berita', [UserController::class, 'berita'])->name('berita');
 Route::get('/jadwal', [UserController::class, 'jadwal'])->name('jadwal');
-Route::get('/contact', [UserController::class, 'contact'])->name('contact');
+Route::get('/galeri', [UserController::class, 'galeri'])->name('galeri');
+Route::get('/profil', [UserController::class, 'profil'])->name('profil');
 
 Route::get('/dashboard', function () {
     return view('admin.index');

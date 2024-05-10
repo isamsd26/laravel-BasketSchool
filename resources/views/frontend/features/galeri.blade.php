@@ -51,107 +51,179 @@
             </div>
         </div>
     </nav>
-
-    <!-- Tambahkan padding-top ke konten untuk memberikan ruang -->
-    <div class="content-gal"> <!-- Tambahkan padding-top -->
-        <!-- Bagian utama dengan konten -->
-        <section id="portfolio" data-scroll-index="5">
+    {{-- Main Content --}}
+    <main>
+        <section class="faq section-padding prelative section-custom" class="page-section bg-light" id="portfolio"
+            data-scroll-index='5'>
             <div class="container">
+                <div class="">
+                    <h2 class="section-heading text-uppercase ms-3">Galeri Foto</h2>
+                    <h3 class="section-subheading text-muted">.</h3>
+                </div>
                 <div class="row">
-                    <div class="col-lg-8">
-                        <div class="text-center">
-                            <h2>Galeri</h2>
-                            <h3 class="text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                        </div>
-                        <div class="row">
-                            <!-- Portofolio item -->
-                            <div class="col-lg-6 mb-4">
-                                <div class="portfolio-item">
-                                    <a class="portfolio-link" href="#portfolioModal1">
-                                        <img class="img-news rounded" src="{{ asset('frontend/images/2.jpg') }}">
-                                    </a>
-                                    <div class="portfolio-caption">
-                                        <div class="portfolio-caption-heading">Threads</div>
-                                        <div class="portfolio-caption-subheading text-muted text-custom">Lorem ipsum
-                                            dolor sit, amet
-                                            consectetur adipisicing elit. Enim asperiores quis explicabo earum neque
-                                            suscipit quaerat. Corrupti, vel cum quam ipsa eius vero architecto quas ea
-                                            blanditiis magni eaque voluptatem!</div>
-                                    </div>
-                                </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+
+                        <div class="portfolio-item">
+                            <a class="portfolio-link">
+                                <img class="img-galeri rounded" src="{{ asset('frontend/images/2.jpg') }}"
+                                    alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Threads</div>
+                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
                             </div>
-                            <div class="col-lg-6 mb-4">
-                                <div class="portfolio-item">
-                                    <a class="portfolio-link" href="#portfolioModal1">
-                                        <img class="img-news rounded" src="{{ asset('frontend/images/2.jpg') }}">
-                                    </a>
-                                    <div class="portfolio-caption">
-                                        <div class="portfolio-caption-heading">Threads</div>
-                                        <div class="portfolio-caption-subheading text-muted">Lorem ipsum dolor sit,
-                                            amet
-                                            consectetur adipisicing elit. Enim asperiores quis explicabo earum neque
-                                            suscipit quaerat. Corrupti, vel cum quam ipsa eius vero architecto quas ea
-                                            blanditiis magni eaque voluptatem!</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Item lainnya -->
                         </div>
                     </div>
-                    <!-- Sidebar -->
-                    <div class="col-lg-4">
-                        <div class="sidebar">
-                            <h3>Cari Berita</h3>
-                            <hr class="t-line">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control " placeholder="Cari Berita Terbaru"
-                                    aria-label="Cari Berita Terbaru" aria-describedby="button-addon2">
-                                <a class="btn btn-outline-secondary" type="button" id="button-addon2">
-                                    <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
-                                </a>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link">
+                                <img class="img-galeri rounded" src="{{ asset('frontend/images/2.jpg') }}"
+                                    alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Explore</div>
+                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
                             </div>
-                            <ul class="list-unstyled">
-                                <!-- Menggunakan list-unstyled untuk menghapus default bullet -->
-                                <!-- Item 1 -->
-                                <li class="d-flex align-items-center mb-3">
-                                    <!-- Menggunakan d-flex untuk menempatkan gambar dan teks -->
-                                    <img src="{{ asset('frontend/images/1.jpg') }}" alt="Gambar 1"
-                                        class="img-ul rounded me-3"> <!-- Gambar di kiri -->
-                                    <div> <!-- Keterangan di kanan -->
-                                        <h6>Header 1</h6>
-                                        <p>Ini adalah keterangan untuk item 1. Isi konten dan deskripsi yang relevan.
-                                        </p>
-                                    </div>
-                                </li>
-                                <!-- Item 2 -->
-                                <li class="d-flex align-items-center mb-3">
-                                    <img src="{{ asset('frontend/images/2.jpg') }}" alt="Gambar 2"
-                                        class="img-ul rounded me-3">
-                                    <div>
-                                        <h6>Header 2</h6>
-                                        <p>Ini adalah keterangan untuk item 2. Isi konten dan deskripsi yang
-                                            relevan.
-                                        </p>
-                                    </div>
-                                </li>
-                                <!-- Item 3 -->
-                                <li class="d-flex align-items-center mb-3">
-                                    <img src="{{ asset('frontend/images/3.jpg') }}" alt="Gambar 3"
-                                        class="img-ul rounded me-3">
-                                    <div>
-                                        <h6>Header 3</h6>
-                                        <p>Ini adalah keterangan untuk item 3. Isi konten dan deskripsi yang relevan.
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link">
+                                <img class="img-galeri rounded" src="{{ asset('frontend/images/2.jpg') }}"
+                                    alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Finish</div>
+                                <div class="portfolio-caption-subheading text-muted">Identity</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link">
+                                <img class="img-galeri rounded" src="{{ asset('frontend/images/2.jpg') }}"
+                                    alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Lines</div>
+                                <div class="portfolio-caption-subheading text-muted">Branding</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link">
+                                <img class="img-galeri rounded" src=".{{ asset('frontend/images/2.jpg') }}"
+                                    alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Southwest</div>
+                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link">
+                                <img class="img-galeri rounded" src="{{ asset('frontend/images/2.jpg') }}"
+                                    alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Window</div>
+                                <div class="portfolio-caption-subheading text-muted">Photography</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+    </main>
+    {{-- pagination --}}
+    <nav aria-label="Page navigation example mt-5">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+    {{-- Parnert --}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="sectioner-header text-center">
+                    <h1>Our Partners</h1>
+                </div>
+                <div class="section-content text-center">
+                    <!-- Row Pertama: 3 Kolom -->
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="single-feature wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="text-right">
+                                    <div>
+                                        <img class="img-fluid rounded"
+                                            src="{{ asset('frontend/images/UI/contentful.png') }}" alt="..." />
+                                        <!-- SVG positioned here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="single-feature wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="text-right">
+                                    <div>
+                                        <img class="img-fluid rounded"
+                                            src="{{ asset('frontend/images/UI/hubspot.png') }}" alt="..." />
+                                        <!-- SVG positioned here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="single-feature wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="text-right">
+                                    <div>
+                                        <img class="img-fluid rounded"
+                                            src="{{ asset('frontend/images/UI/grammarly.png') }}" alt="..." />
+                                        <!-- SVG positioned here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="single-feature wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="text-right">
+                                    <div>
+                                        <img class="img-fluid rounded"
+                                            src="{{ asset('frontend/images/UI/segment.png') }}" alt="..." />
+                                        <!-- SVG positioned here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="single-feature wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="text-right">
+                                    <div>
+                                        <img class="img-fluid rounded"
+                                            src="{{ asset('frontend/images/UI/product.png') }}" alt="..." />
+                                        <!-- SVG positioned here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
     <!-- Footer -->
     <div class="card mx-5 mt-5 pl-4" style="width: auto; height: 120px; background-color: black;">
         <div class="card-body d-flex justify-content-between align-items-center text-white pe-4">

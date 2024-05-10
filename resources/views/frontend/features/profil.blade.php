@@ -33,7 +33,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('profil') }}" data-scroll-nav="0">Profil</a>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('profil') }}"
+                            data-scroll-nav="0">Profil</a>
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('berita') }}"
                             data-scroll-nav="1">Berita</a> </li>
@@ -51,106 +52,100 @@
             </div>
         </div>
     </nav>
-
-    <!-- Tambahkan padding-top ke konten untuk memberikan ruang -->
-    <div class="content-gal"> <!-- Tambahkan padding-top -->
-        <!-- Bagian utama dengan konten -->
-        <section id="portfolio" data-scroll-index="5">
+    {{-- Main Content --}}
+    <main class="content-gal">
+        <div class=" d-flex flex-column justify-content-center align-items-center bg-profil margin-profil"
+            id="alasan">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="text-center">
-                            <h2>Galeri</h2>
-                            <h3 class="text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <div class="sectioner-header text-center mb-5">
+                    <h4>Profil</h4>
+                    <h1>About AKJ Basketball</h3>
+                        <span class="line"></span>
+                </div>
+                <div class="container-custom mt-1">
+                    <div class="row">
+                        <!-- Div pertama untuk gambar -->
+                        <div class="col-md-6 d-flex justify-content-center align-items-center">
+                            <div class="position-relative clearfix">
+                                <img class="img-abs rounded" src="{{ asset('frontend/images/1.jpg') }}"
+                                    alt="..." />
+
+                                <img class="img-abs rounded position-absolute"
+                                    src="{{ asset('frontend/images/3.jpg') }}" alt="..." />
+                                <!-- Gambar kedua dipindah ke kiri -->
+                            </div>
                         </div>
-                        <div class="row">
-                            <!-- Portofolio item -->
-                            <div class="col-lg-6 mb-4">
-                                <div class="portfolio-item">
-                                    <a class="portfolio-link" href="#portfolioModal1">
-                                        <img class="img-news rounded" src="{{ asset('frontend/images/2.jpg') }}">
-                                    </a>
-                                    <div class="portfolio-caption">
-                                        <div class="portfolio-caption-heading">Threads</div>
-                                        <div class="portfolio-caption-subheading text-muted text-custom">Lorem ipsum
-                                            dolor sit, amet
-                                            consectetur adipisicing elit. Enim asperiores quis explicabo earum neque
-                                            suscipit quaerat. Corrupti, vel cum quam ipsa eius vero architecto quas ea
-                                            blanditiis magni eaque voluptatem!</div>
-                                    </div>
+                        <!-- Div kedua untuk konten -->
+                        <div class="col-md-6 order-1 order-md-2">
+                            <div>
+                                <div class="my-3">
+                                    <p>Sudahkah kamu mendengar tentang AKJ Basketball, sekolah basket keren di Semarang?
+                                        Di
+                                        sana,
+                                        bukan hanya soal bermain basket, tapi juga tentang petualangan yang menantang
+                                        dan
+                                        pertumbuhan
+                                        pribadi yang luar biasa!
+                                    </p>
+                                    <p>Bayangkan, di AKJ Basketball, kamu akan diajari teknik-teknik basket terbaik oleh
+                                        para pelatih handal yang siap membimbingmu menjadi pemain basket yang hebat
+                                        Mereka
+                                        tidak hanya mengajarkan cara melempar bola atau melakukan dribble, tetapi juga
+                                        membekalimu dengan keterampilan taktis dan fisik yang akan membuatmu unggul di
+                                        lapangan.</p>
                                 </div>
                             </div>
-                            <div class="col-lg-6 mb-4">
-                                <div class="portfolio-item">
-                                    <a class="portfolio-link" href="#portfolioModal1">
-                                        <img class="img-news rounded" src="{{ asset('frontend/images/2.jpg') }}">
-                                    </a>
-                                    <div class="portfolio-caption">
-                                        <div class="portfolio-caption-heading">Threads</div>
-                                        <div class="portfolio-caption-subheading text-muted">Lorem ipsum dolor sit,
-                                            amet
-                                            consectetur adipisicing elit. Enim asperiores quis explicabo earum neque
-                                            suscipit quaerat. Corrupti, vel cum quam ipsa eius vero architecto quas ea
-                                            blanditiis magni eaque voluptatem!</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Item lainnya -->
-                        </div>
-                    </div>
-                    <!-- Sidebar -->
-                    <div class="col-lg-4">
-                        <div class="sidebar">
-                            <h3>Cari Berita</h3>
-                            <hr class="t-line">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control " placeholder="Cari Berita Terbaru"
-                                    aria-label="Cari Berita Terbaru" aria-describedby="button-addon2">
-                                <a class="btn btn-outline-secondary" type="button" id="button-addon2">
-                                    <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
-                                </a>
-                            </div>
-                            <ul class="list-unstyled">
-                                <!-- Menggunakan list-unstyled untuk menghapus default bullet -->
-                                <!-- Item 1 -->
-                                <li class="d-flex align-items-center mb-3">
-                                    <!-- Menggunakan d-flex untuk menempatkan gambar dan teks -->
-                                    <img src="{{ asset('frontend/images/1.jpg') }}" alt="Gambar 1"
-                                        class="img-ul rounded me-3"> <!-- Gambar di kiri -->
-                                    <div> <!-- Keterangan di kanan -->
-                                        <h6>Header 1</h6>
-                                        <p>Ini adalah keterangan untuk item 1. Isi konten dan deskripsi yang relevan.
-                                        </p>
-                                    </div>
-                                </li>
-                                <!-- Item 2 -->
-                                <li class="d-flex align-items-center mb-3">
-                                    <img src="{{ asset('frontend/images/2.jpg') }}" alt="Gambar 2"
-                                        class="img-ul rounded me-3">
-                                    <div>
-                                        <h6>Header 2</h6>
-                                        <p>Ini adalah keterangan untuk item 2. Isi konten dan deskripsi yang
-                                            relevan.
-                                        </p>
-                                    </div>
-                                </li>
-                                <!-- Item 3 -->
-                                <li class="d-flex align-items-center mb-3">
-                                    <img src="{{ asset('frontend/images/3.jpg') }}" alt="Gambar 3"
-                                        class="img-ul rounded me-3">
-                                    <div>
-                                        <h6>Header 3</h6>
-                                        <p>Ini adalah keterangan untuk item 3. Isi konten dan deskripsi yang relevan.
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+        <div class="container">
+            <div class="sectioner-header text-center mb-5">
+                <h2>Sejarah AKJ Basketball School</h3>
+                    <span class="line"></span>
+            </div>
+            <div class="container-prof">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur facere, tenetur in eveniet
+                    consectetur soluta iste. Facilis officia voluptates repudiandae adipisci sapiente est dolorum,
+                    placeat esse officiis, laborum nihil ea. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Fugit ipsam molestiae facilis neque vero voluptatibus tenetur aut odit possimus, sint quos, ab
+                    beatae esse soluta porro illo labore fugiat recusandae. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Accusantium harum consectetur ea similique cumque saepe. Placeat veniam aperiam
+                    cupiditate perspiciatis delectus impedit modi molestiae hic eligendi error! Aperiam, dolores
+                    delectus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur facere, tenetur in eveniet
+                    consectetur soluta iste. Facilis officia voluptates repudiandae adipisci sapiente est dolorum,
+                    placeat esse officiis, laborum nihil ea. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Fugit ipsam molestiae facilis neque vero voluptatibus tenetur aut odit possimus, sint quos, ab
+                    beatae esse soluta porro illo labore fugiat recusandae. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Accusantium harum consectetur ea similique cumque saepe. Placeat veniam aperiam
+                    cupiditate perspiciatis delectus impedit modi molestiae hic eligendi error! Aperiam, dolores
+                    delectus.</p>
+            </div>
+            <div class="container">
+                <div class="sectioner-header text-center row-margin">
+                    <h2>Visi Misi AKJ Basketball School</h3>
+                        <span class="line"></span>
+                </div>
+                <div class="container container-visi d-flex">
+                    <div class="row row-margin">
+                        <div class="col-3">
+                            <img class="img-visi" src="{{ asset('frontend/images/UI/visi.png') }}" alt="">
+                        </div>
+                        <div class="col-8">
+                            <p class="text-misi">Lunar Strategy helped us with our digital marketing for 4 months now and still helps us.
+                                Great service and highly recommended.
+                            </p>
+                            <p class="text-visi">
+                                — Kimmo Hakonen - Skrum Master at DaGear AB
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <!-- Footer -->
     <div class="card mx-5 mt-5 pl-4" style="width: auto; height: 120px; background-color: black;">
