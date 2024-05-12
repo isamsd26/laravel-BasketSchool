@@ -22,7 +22,7 @@
     <!-- Navbar dengan posisi tetap -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" id="navbar">
         <div class="container">
-            <a class="navbar-brand navbar-logo" href="#"> <img
+            <a class="navbar-brand navbar-logo" href="{{ route('index') }}"> <img
                     src="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}" alt="logo" class="logo-1"
                     width="50" height="50">
             </a>
@@ -54,6 +54,7 @@
     </nav>
     {{-- Main Content --}}
     <main class="content-gal">
+        {{-- Penjelasan Profil --}}
         <div class=" d-flex flex-column justify-content-center align-items-center bg-profil margin-profil"
             id="alasan">
             <div class="container">
@@ -64,7 +65,6 @@
                 </div>
                 <div class="container-custom mt-1">
                     <div class="row">
-                        <!-- Div pertama untuk gambar -->
                         <div class="col-md-6 d-flex justify-content-center align-items-center">
                             <div class="position-relative clearfix">
                                 <img class="img-abs rounded" src="{{ asset('frontend/images/1.jpg') }}"
@@ -72,10 +72,8 @@
 
                                 <img class="img-abs rounded position-absolute"
                                     src="{{ asset('frontend/images/3.jpg') }}" alt="..." />
-                                <!-- Gambar kedua dipindah ke kiri -->
                             </div>
                         </div>
-                        <!-- Div kedua untuk konten -->
                         <div class="col-md-6 order-1 order-md-2">
                             <div>
                                 <div class="my-3">
@@ -92,7 +90,8 @@
                                         Mereka
                                         tidak hanya mengajarkan cara melempar bola atau melakukan dribble, tetapi juga
                                         membekalimu dengan keterampilan taktis dan fisik yang akan membuatmu unggul di
-                                        lapangan.</p>
+                                        lapangan.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -100,10 +99,11 @@
                 </div>
             </div>
         </div>
+        {{-- sejarah --}}
         <div class="container">
             <div class="sectioner-header text-center mb-5">
-                <h2>Sejarah AKJ Basketball School</h3>
-                    <span class="line"></span>
+                <h2>Sejarah AKJ Basketball School</h2>
+                <span class="line"></span>
             </div>
             <div class="container-prof">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur facere, tenetur in eveniet
@@ -123,21 +123,23 @@
                     cupiditate perspiciatis delectus impedit modi molestiae hic eligendi error! Aperiam, dolores
                     delectus.</p>
             </div>
-            <div class="container">
+            {{-- VISI MISI  --}}
+            <div class="container container-visi">
                 <div class="sectioner-header text-center row-margin">
-                    <h2>Visi Misi AKJ Basketball School</h3>
-                        <span class="line"></span>
+                    <h2>Visi Misi AKJ Basketball School</h2>
+                    <span class="line"></span>
                 </div>
-                <div class="container container-visi d-flex">
+                <div class="container d-flex">
                     <div class="row row-margin">
                         <div class="col-3">
                             <img class="img-visi" src="{{ asset('frontend/images/UI/visi.png') }}" alt="">
                         </div>
                         <div class="col-8">
-                            <p class="text-misi">Lunar Strategy helped us with our digital marketing for 4 months now and still helps us.
+                            <p class="text-misi text-profil">Lunar Strategy helped us with our digital marketing for 4 months now
+                                and still helps us.
                                 Great service and highly recommended.
                             </p>
-                            <p class="text-visi">
+                            <p class="text-visi text-profil">
                                 — Kimmo Hakonen - Skrum Master at DaGear AB
                             </p>
                         </div>
@@ -145,6 +147,126 @@
                 </div>
             </div>
         </div>
+        {{-- Filosofi --}}
+        <div class="container margin-fil">
+            <div class=" mt-1">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 order-1">
+                        <div>
+                            <div class="mt-5 mb-2 text-center">
+                                <div class="mb-4">
+                                    <h3>
+                                        Filosofi AKJ Basketball
+                                    </h3>
+
+                                </div>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, eius amet itaque et
+                                    velit esse quasi numquam eos. Ipsum enim nulla nesciunt! Repellat, distinctio quidem
+                                    hic porro minima id nam.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatem nihil,
+                                    consectetur, quaerat natus repellat vero numquam animi quam ipsa molestias.
+                                    Voluptatum, omnis accusamus? Consectetur magni vel quod quo dignissimos?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center align-items-center order-md-2">
+                        <div class="position-relative clearfix">
+                            <img class="img-abs rounded" src="{{ asset('frontend/images/UI/Logo.png') }}"
+                                alt="..." />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{-- struktur organisasi --}}
+        <div class="margin-fil mb-5">
+            <div class="row justify-content-center">
+                <div>
+                    <h3 class="mb-4 text-center">
+                        Struktur organisasi
+                    </h3>
+                    <span class="line"></span>
+                </div>
+                <div class="col-md-3 mb-4 col-centered">
+                    <div class="card-profil justify-content-center">
+                        <img src="{{ asset('frontend/images/UI/profil.png') }}" class="card-img-top img-profil mb-5"
+                            alt="...">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Tim Haldorson</h4>
+                            <p class="card-text mt-1 text-profil">Jabatan</p>
+                            <p class="card-text mt-2 text-profil">Alamat 1</p>
+                            <p class="card-text text-profil">Email 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 col-centered">
+                    <div class="card-profil justify-content-center">
+                        <img src="{{ asset('frontend/images/UI/profil.png') }}" class="card-img-top img-profil mb-5"
+                            alt="...">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Tim Haldorson</h4>
+                            <p class="card-text mt-1 text-profil">Jabatan</p>
+                            <p class="card-text mt-2 text-profil">Alamat </p>
+                            <p class="card-text text-profil">Email </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 col-centered">
+                    <div class="card-profil justify-content-center">
+                        <img src="{{ asset('frontend/images/UI/profil.png') }}" class="card-img-top img-profil mb-5"
+                            alt="...">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Tim Haldorson</h4>
+                            <p class="card-text mt-1 text-profil">Jabatan</p>
+                            <p class="card-text mt-2 text-profil">Alamat </p>
+                            <p class="card-text text-profil">Email </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Baris kedua -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-3 mb-4 col-centered">
+                    <div class="card-profil justify-content-center">
+                        <img src="{{ asset('frontend/images/UI/profil.png') }}" class="card-img-top img-profil mb-5"
+                            alt="...">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Tim Haldorson</h4>
+                            <p class="card-text mt-1 text-profil">Jabatan</p>
+                            <p class="card-text mt-2 text-profil">Alamat 1</p>
+                            <p class="card-text text-profil">Email 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 col-centered">
+                    <div class="card-profil justify-content-center">
+                        <img src="{{ asset('frontend/images/UI/profil.png') }}" class="card-img-top img-profil mb-5"
+                            alt="...">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Tim Haldorson</h4>
+                            <p class="card-text mt-1 text-profil">Jabatan</p>
+                            <p class="card-text mt-2 text-profil">Alamat </p>
+                            <p class="card-text text-profil">Email </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 col-centered">
+                    <div class="card-profil justify-content-center">
+                        <img src="{{ asset('frontend/images/UI/profil.png') }}" class="card-img-top img-profil mb-5"
+                            alt="...">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Tim Haldorson</h4>
+                            <p class="card-text mt-1 text-profil">Jabatan</p>
+                            <p class="card-text mt-2 text-profil">Alamat </p>
+                            <p class="card-text text-profil">Email </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- Footer -->

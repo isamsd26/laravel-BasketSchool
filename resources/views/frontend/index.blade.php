@@ -24,7 +24,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" id="navbar">
         <div class="container">
-            <a class="navbar-brand navbar-logo" href="#"> <img
+            <a class="navbar-brand navbar-logo" href="{{ route('index') }}"> <img
                     src="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}" alt="logo" class="logo-1"
                     width="50" height="50">
             </a>
