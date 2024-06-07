@@ -20,6 +20,27 @@ class RouteServiceProvider extends ServiceProvider
     public const HOME = '/dashboard';
 
     /**
+     * The path to the "siswa" route for your application.
+     *
+     * @var string
+     */
+    public const SISWA_HOME = '/siswa';
+
+    /**
+     * The path to the "pelatih" route for your application.
+     *
+     * @var string
+     */
+    public const PELATIH_HOME = '/pelatih';
+
+    /**
+     * The path to the "admin" route for your application.
+     *
+     * @var string
+     */
+    public const ADMIN_HOME = '/admin/dashboard';
+
+    /**
      * Define your route model bindings, pattern filters, and other route configuration.
      */
     public function boot(): void

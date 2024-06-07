@@ -34,20 +34,22 @@
                 <i class="fas fa-bars ms-1"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('profil') }}" data-scroll-nav="0">Profil</a>
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0 ">
+                    <li class="nav-item "> <a class="nav-link text-white" href="{{ route('profil') }}"
+                            data-scroll-nav="0">Profil</a>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('berita') }}"
+                    <li class="nav-item"> <a class="nav-link text-white" href="{{ route('berita') }}"
                             data-scroll-nav="1">Berita</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('jadwal') }}"
+                    <li class="nav-item"> <a class="nav-link text-white" href="{{ route('jadwal') }}"
                             data-scroll-nav="3">Jadwal</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('galeri') }}" data-scroll-nav="2">Galeri</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">Informasi
+                    <li class="nav-item"> <a class="nav-link text-white" href="{{ route('galeri') }}"
+                            data-scroll-nav="2">Galeri</a> </li>
+                    <li class="nav-item"> <a class="nav-link text-white" href="#" data-scroll-nav="4">Informasi
                             Pendafataran</a> </li>
                 </ul>
                 <div class="d-flex align-itecenter">
-                    <a href="{{ route('login') }}" class="btn btn-outline-light ms-2 fs-5">Masuk</a>
-                    <a href="{{ route('register') }}" class="btn btn-light ms-3 fs-5">Daftar</a>
+                    <a href="{{ route('login') }}" class="btn btn-outline-light ms-2 fs-5 text-white">Masuk</a>
+                    <a href="{{ route('register') }}" class="btn btn-light ms-3 fs-5 text-btn">Daftar</a>
                 </div>
             </div>
         </div>

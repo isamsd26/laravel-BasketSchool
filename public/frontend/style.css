@@ -117,21 +117,21 @@ h6 {
 .navbar-transparent {
     background: transparent; 
     transition: background 0.3s ease; 
-    color:#000;
+    color:white;
 }
 .navbar-solid {
     background-color: #7834BE; 
 }
+.text-btn{
+    color: #7834BE;
+}
 .navbar-transparent .navbar-nav .nav-link {
-  color: black; 
+  color: #7834BE; 
 }
-.navbar-transparent .btn-outline-light {
-    color: black; 
-    border-color: black; 
-}
+
 .navbar-solid .btn-outline-light {
     color: white; 
-    border-color: white; 
+ 
 }
 .navbar-solid .navbar-nav .nav-link {
   color: white; 
@@ -548,6 +548,12 @@ h6 {
 }
 .text-visi{
     font-size: 12px;
+}
+.btn-outline-light{
+    border-radius: 20px;
+}
+.btn-light{
+    border-radius: 20px;
 }
 @media screen and (max-width: 1280px){
     .img-abs{

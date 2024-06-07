@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Admin AKJ Basketball School</title>
-     <link rel="icon" type="image/x-icon" href="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}" />
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="{{ asset('backend/css/styles.css') }}" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -41,16 +41,16 @@
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li><a class="dropdown-item" href="{{ route('admin.logout') }}">Logout</a></li>
+                    <li><a class="dropdown-item" href="{{ route('pelatih.logout') }}">Logout</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
     <div id="layoutSidenav">
-        @include('admin.body.sidebar')
+        @include('pelatih.body.sidebar')
         <div id="layoutSidenav_content">
-            @yield('admin')
-            @include('admin.body.footer')
+            @yield('pelatih')
+            @include('pelatih.body.footer')
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">

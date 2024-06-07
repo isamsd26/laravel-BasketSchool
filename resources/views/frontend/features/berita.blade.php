@@ -45,8 +45,8 @@
                             Pendafataran</a> </li>
                 </ul>
                 <div class="d-flex align-itecenter">
-                    <a href="{{ route('login') }}" class="btn btn-outline-light ms-2 fs-5">Masuk</a>
-                    <a href="{{ route('register') }}" class="btn btn-light ms-3 fs-5">Daftar</a>
+                    <a href="{{ route('login') }}" class="btn btn-outline-light ms-2 fs-5 text-btn">Masuk</a>
+                    <a href="{{ route('register') }}" class="btn btn-light ms-3 fs-5 text-btn">Daftar</a>
                 </div>
             </div>
         </div>
@@ -224,94 +224,7 @@
     <script src="{{ asset('frontend/js/scrollIt.min.js') }}"></script>
     <script src="{{ asset('frontend/js/wow.min.js') }}"></script>
     <script src="{{ asset('frontend/js/script.js') }}"></script>
-    <script>
-        window.addEventListener("scroll", function() {
-            const navbar = document.getElementById("navbar");
-            const stickyPoint = 50;
-
-            if (window.pageYOffset > stickyPoint) {
-                navbar.classList.remove("navbar-transparent");
-                navbar.classList.add("navbar-solid");
-            } else {
-                navbar.classList.remove("navbar-solid");
-                navbar.classList.add("navbar-transparent");
-            }
-        });
-    </script>
-    <script>
-        wow = new WOW();
-        wow.init();
-        $(document).ready(function(e) {
-
-            $('#video-icon').on('click', function(e) {
-                e.preventDefault();
-                $('.video-popup').css('display', 'flex');
-                $('.iframe-src').slideDown();
-            });
-            $('.video-popup').on('click', function(e) {
-                var $target = e.target.nodeName;
-                var video_src = $(this).find('iframe').attr('src');
-                if ($target != 'IFRAME') {
-                    $('.video-popup').fadeOut();
-                    $('.iframe-src').slideUp();
-                    $('.video-popup iframe').attr('src', " ");
-                    $('.video-popup iframe').attr('src', video_src);
-                }
-            });
-
-            $('.slider').bxSlider({
-                pager: false
-            });
-        });
-
-        window.onscroll = function() {
-            myFunction()
-        };
-
-        const navbar = document.getElementById("navbar");
-        const sticky = navbar.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky");
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-
-        // $(window).on("scroll",function () {
-        //     var bodyScroll = $(window).scrollTop(),
-        //     navbar = $(".navbar");
-        //     if(bodyScroll > 50){
-        //       $('.navbar-logo img').attr('src','../../../public/frontend/images/logo-black.png');
-        //       navbar.addClass("nav-scroll");
-        //     }else{
-        //       $('.navbar-logo img').attr('src','../../../public/frontend/images/logo.png');
-        //       navbar.removeClass("nav-scroll");
-        //     }
-        // });
-        // $(window).on("load",function (){
-        // 	var bodyScroll = $(window).scrollTop(),
-        // 	navbar = $(".navbar");
-
-        // 	if(bodyScroll > 50){
-        // 	$('.navbar-logo img').attr('src','../../../public/frontend/images/logo-black.png');
-        // 	navbar.addClass("nav-scroll");
-        // 	}else{
-        // 	$('.navbar-logo img').attr('src','../../../public/frontend/images/logo-white.png');
-        // 	navbar.removeClass("nav-scroll");
-        // 	}
-
-        // 	$.scrollIt({
-
-        // 	easing: 'swing',      // the easing function for animation
-        // 	scrollTime: 900,       // how long (in ms) the animation takes
-        // 	activeClass: 'active', // class given to the active nav element
-        // 	onPageChange: null,    // function(pageIndex) that is called when page is changed
-        // 	topOffset: -63
-        // 	});
-        // });
-    </script>
+    <script src="{{ asset ('frontend/js/navbar.js')}}"></script>
 
 </body>
 

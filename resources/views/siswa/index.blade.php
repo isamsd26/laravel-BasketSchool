@@ -1,5 +1,5 @@
-@extends('admin.admin')
-@section('admin')
+@extends('siswa.siswa')
+@section('siswa')
     <main>
         <div class="container-fluid px-4">
             <h1 class="mt-4">Dashboard</h1>

@@ -32,20 +32,33 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'role' => ['required', 'string', 'in:siswa,pelatih,admin'], // Pastikan memvalidasi peran
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => $request->role, // Simpan peran pengguna
         ]);
 
         event(new Registered($user));
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        // Tentukan URL tujuan berdasarkan peran pengguna
+        $redirectRoute = RouteServiceProvider::HOME;
+
+        if ($user->role === 'siswa') {
+            $redirectRoute = RouteServiceProvider::SISWA_HOME;
+        } elseif ($user->role === 'pelatih') {
+            $redirectRoute = RouteServiceProvider::PELATIH_HOME;
+        } elseif ($user->role === 'admin') {
+            $redirectRoute = RouteServiceProvider::HOME;
+        }
+
+        return redirect($redirectRoute);
     }
 }

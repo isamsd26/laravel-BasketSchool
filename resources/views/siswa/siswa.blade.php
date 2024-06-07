@@ -41,16 +41,16 @@
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li><a class="dropdown-item" href="{{ route('admin.logout') }}">Logout</a></li>
+                    <li><a class="dropdown-item" href="{{ route('siswa.logout') }}">Logout</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
     <div id="layoutSidenav">
-        @include('admin.body.sidebar')
+        @include('siswa.body.sidebar')
         <div id="layoutSidenav_content">
-            @yield('admin')
-            @include('admin.body.footer')
+            @yield('siswa')
+            @include('siswa.body.footer')
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">

@@ -29,7 +29,22 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        // Get the authenticated user's role
+        $user = Auth::user();
+        $role = $user->role;
+
+        // Redirect based on role
+        switch ($role) {
+            case 'admin':
+                return redirect()->intended(route('admin'));
+            case 'siswa':
+                return redirect()->intended(route('siswa'));
+            case 'pelatih':
+                return redirect()->intended(route('pelatih'));
+            default:
+                Auth::logout();
+                return redirect('/login')->withErrors(['role' => 'Unauthorized role selected']);
+        }
     }
 
     /**

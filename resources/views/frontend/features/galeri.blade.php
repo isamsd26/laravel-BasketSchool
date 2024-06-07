@@ -45,8 +45,8 @@
                             Pendafataran</a> </li>
                 </ul>
                 <div class="d-flex align-itecenter">
-                    <a href="{{ route('login') }}" class="btn btn-outline-light ms-2 fs-5">Masuk</a>
-                    <a href="{{ route('register') }}" class="btn btn-light ms-3 fs-5">Daftar</a>
+                    <a href="{{ route('login') }}" class="btn btn-outline-light ms-2 fs-5 text-btn">Masuk</a>
+                    <a href="{{ route('register') }}" class="btn btn-light ms-3 fs-5 text-btn">Daftar</a>
                 </div>
             </div>
         </div>
