@@ -8,13 +8,14 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SiswaController;
 
 // Route untuk admin
 Route::get('/admin/dashboard', function () {
     return view('admin.index');
 })->middleware(['auth', 'verified', 'role:admin'])->name('admin');
 Route::get('/admin/logout', [AuthenticatedSessionController::class, 'destroy'])->name('admin.logout');
-
+Route::get('/admin/dashboard', [AdminController::class, 'admin'])->name('admin');;
 // Route untuk siswa
 Route::get('/siswa', function () {
     return view('siswa.index');
@@ -55,8 +56,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// route untuk halaman admin
-
-
+// route untuk pemanggilan database siswa
+Route::get('/dashboard', [SiswaController::class, 'index'])->name('admin');
+// route untuk button 
+Route::get('/dashboard/filter/{kelompok_umur}', [SiswaController::class, 'filter']);
+Route::get('/dashboard/jumlah-siswa/{kelompok_umur}', [SiswaController::class, 'jumlahSiswaByKelompokUmur'])->name('admin.admin');
 
 require __DIR__ . '/auth.php';

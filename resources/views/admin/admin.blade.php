@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Admin AKJ Basketball School</title>
-     <link rel="icon" type="image/x-icon" href="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}" />
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="{{ asset('backend/css/styles.css') }}" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -49,16 +49,127 @@
     <div id="layoutSidenav">
         @include('admin.body.sidebar')
         <div id="layoutSidenav_content">
-            @yield('admin')
+
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Dashboard</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-danger text-white mb-4">
+                                <div class="card-body">
+                                    Jumlah Atlit SD: {{ $jumlah_sd }}
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="#">Lihat Detail</a>
+                                    <div class="small text-white">
+                                        <i class="fas fa-angle-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-primary text-white mb-4">
+                                <div class="card-body">
+                                    Jumlah Atlit SMP: {{ $jumlah_smp }}
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="#">Lihat Detail</a>
+                                    <div class="small text-white">
+                                        <i class="fas fa-angle-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card bg-secondary text-white mb-4">
+                                <div class="card-body">
+                                    Jumlah Atlit SMA: {{ $jumlah_sma }}
+                                </div>
+                                <div class="card-footer d-flex align-items-center justify-content-between">
+                                    <a class="small text-white stretched-link" href="#">Lihat Detail</a>
+                                    <div class="small text-white">
+                                        <i class="fas fa-angle-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card my-4">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="fas fa-table me-3"></i> Data Siswa
+                            </div>
+                            <div>
+                                <button class="btn btn-primary btn-sm" onclick="filterData('SD')">SD</button>
+                                <button class="btn btn-secondary btn-sm" onclick="filterData('SMP')">SMP</button>
+                                <button class="btn btn-success btn-sm" onclick="filterData('SMA')">SMA</button>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Nama Siswa</th>
+                                        <th>Kelompok Umur</th>
+                                        <th>Jenis Kelamin</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="siswa-table-body">
+                                    @foreach ($siswa as $item)
+                                        <tr>
+                                            <td>{{ $item->nama_siswa }}</td>
+                                            <td>{{ $item->kelompok_umur }}</td>
+                                            <td>{{ $item->jenis_kelamin }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
             @include('admin.body.footer')
         </div>
     </div>
+    <script>
+        function filterData(kelompok_umur) {
+            fetch(`/dashboard/filter/${kelompok_umur}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data); // Periksa data yang diterima
+                    let tableBody = document.getElementById('siswa-table-body');
+                    tableBody.innerHTML = '';
+                    if (data.error) {
+                        console.error('Error from server:', data.error);
+                    } else {
+                        data.forEach(item => {
+                            let row = `<tr>
+                        <td>${item.nama_siswa}</td>
+                        <td>${item.kelompok_umur}</td>
+                        <td>${item.jenis_kelamin}</td>
+                    </tr>`;
+                            tableBody.innerHTML += row;
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>
     <script src="{{ asset('backend/js/scripts.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="{{ asset('backend/assets/demo/chart-area-demo.js') }}"></script>
-    <script src="{{ asset('backend/assets/demo/chart-bar-demo.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
         crossorigin="anonymous"></script>
     <script src="{{ asset('backend/js/datatables-simple-demo.js') }}"></script>
