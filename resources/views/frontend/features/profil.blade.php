@@ -38,7 +38,7 @@
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('berita') }}"
                             data-scroll-nav="1">Berita</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('jadwal') }}"
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('jadwal.index') }}"
                             data-scroll-nav="3">Jadwal</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('galeri') }}"
                             data-scroll-nav="2">Galeri</a> </li>

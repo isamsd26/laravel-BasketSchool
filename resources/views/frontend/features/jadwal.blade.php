@@ -33,11 +33,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('profil') }}" data-scroll-nav="0">Profil</a>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('profil') }}"
+                            data-scroll-nav="0">Profil</a>
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('berita') }}"
                             data-scroll-nav="1">Berita</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('jadwal') }}"
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('jadwal.index') }}"
                             data-scroll-nav="3">Jadwal</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('galeri') }}"
                             data-scroll-nav="2">Galeri</a> </li>
@@ -121,60 +122,40 @@
                             </div>
                         </div>
                     </div>
-                    <p class="fs-4 fw-bold">Rabu, 24-5-2024</p> <!-- Mengatur ukuran kolom -->
-                    <div class="card card-custom">
-                        <div>
-                            <div class="card card-kecil">
-                                <!-- Warna khusus untuk card -->
-                                Nama Kompetisi
-                            </div>
-                        </div>
-                        <!-- Card yang ingin ditempatkan di tengah -->
-                        <div class="card-body d-flex justify-content-between align-items-center">
-                            <!-- Konten card -->
-                            <div>
-                                <img src="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}" alt="Logo Klub A"
-                                    class="img-logo">
-                            </div>
-                            <div>
-                                <p class="text-logo">VS</p>
-                            </div>
-                            <div>
-                                <img src="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}" alt="Logo Klub B"
-                                    class="img-logo">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 mb-4 margin-logo">
-                        <p class="fs-4 fw-bold">Rabu, 24-5-2024</p>
-                        <div class="card card-custom">
-                            <div>
-                                <div class="card card-kecil">
-                                    <!-- Warna khusus untuk card -->
-                                    Nama Kompetisi
-                                </div>
-                            </div>
-                            <div class="card-body d-flex justify-content-between align-items-center">
+
+                    @foreach ($jadwal as $item)
+                        <div class="col-12 mb-4 margin-logo">
+                            <p class="fs-4 fw-bold">{{ $item->hari_tanding }}, {{ $item->tanggal_tanding }}</p>
+                            <div class="card card-custom">
                                 <div>
-                                    <img src={{ asset('frontend/images/Logo_AKJ_Basketball.png') }} alt="Logo Klub A"
-                                        class="img-logo">
+                                    <div class="card card-kecil">
+                                        {{ $item->nama_kompetisi }}
+                                    </div>
                                 </div>
-                                <div>
-                                    <p class="text-logo">VS</p>
-                                </div>
-                                <div>
-                                    <img src="{{ asset('frontend/images/Logo_AKJ_Basketball.png') }}"
-                                        alt="Logo Klub B" class="img-logo">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <img src="{{ asset('storage/' . $item->logo_tim_a) }}"
+                                            alt="Logo Klub A" class="img-logo">
+                                    </div>
+                                    <div>
+                                        <p class="text-logo">VS</p>
+                                    </div>
+                                    <div>
+                                        <img src="{{ asset('storage/' . $item->logo_tim_b) }}"
+                                            alt="Logo Klub B" class="img-logo">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row text-center"> <!-- Baris dengan tombol di tengah -->
+                    @endforeach
+
+
+                    {{-- <div class="row text-center"> <!-- Baris dengan tombol di tengah -->
                         <div class="col-12"> <!-- Kolom dengan ukuran penuh -->
                             <a href="{{ route('berita') }}" class="about-btn">Lihat Berita Lainnya</a>
                             <!-- Tombol di tengah -->
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -329,7 +310,7 @@
         <script src="{{ asset('frontend/js/scrollIt.min.js') }}"></script>
         <script src="{{ asset('frontend/js/wow.min.js') }}"></script>
         <script src="{{ asset('frontend/js/script.js') }}"></script>
-        <script src="{{asset ('frontend/js/navbar.js')}}"></script>
+        <script src="{{ asset('frontend/js/navbar.js') }}"></script>
 
 </body>
 

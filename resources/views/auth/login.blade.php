@@ -22,7 +22,7 @@
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
-        {{-- Dropdown ROle --}}
+        {{-- Dropdown ROle
         <div class="mt-4">
             <x-input-label class="text-dark" for="role" :value="__('Role')" />
             <select id="role" class="block mt-1 w-full rounded" name="role" required>
@@ -32,7 +32,7 @@
                 <option value="pelatih">Pelatih</option>
             </select>
             <x-input-error :messages="$errors->get('role')" class="mt-2" />
-        </div>
+        </div> --}}
         <!-- Remember Me -->
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">

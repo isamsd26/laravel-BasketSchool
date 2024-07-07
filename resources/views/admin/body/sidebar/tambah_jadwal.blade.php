@@ -52,85 +52,47 @@
 
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Dashboard</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Dashboard</li>
-                    </ol>
-                    {{-- <div class="row">
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-danger text-white mb-4">
-                                <div class="card-body">
-                                    Jumlah Atlit SD: {{ $jumlah_sd }}
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Lihat Detail</a>
-                                    <div class="small text-white">
-                                        <i class="fas fa-angle-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-primary text-white mb-4">
-                                <div class="card-body">
-                                    Jumlah Atlit SMP: {{ $jumlah_smp }}
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Lihat Detail</a>
-                                    <div class="small text-white">
-                                        <i class="fas fa-angle-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-secondary text-white mb-4">
-                                <div class="card-body">
-                                    Jumlah Atlit SMA: {{ $jumlah_sma }}
-                                </div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Lihat Detail</a>
-                                    <div class="small text-white">
-                                        <i class="fas fa-angle-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
-
-                    <div class="card my-4">
-                        <div class="card-header d-flex justify-content-between align-items-center">
-                            <div>
-                                <i class="fas fa-table me-3"></i> Data Siswa
-                            </div>
-                            <div>
-                                <button class="btn btn-primary btn-sm" onclick="filterData('SD')">SD</button>
-                                <button class="btn btn-secondary btn-sm" onclick="filterData('SMP')">SMP</button>
-                                <button class="btn btn-success btn-sm" onclick="filterData('SMA')">SMA</button>
-                            </div>
-                            <div></div>
+                    <h1 class="my-4">Tambah Jadwal</h1>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="text-center">Isi Data untuk Tambah Jadwal</h4>
                         </div>
                         <div class="card-body">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>Nama Siswa</th>
-                                        <th>Kelompok Umur</th>
-                                        <th>Jenis Kelamin</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="siswa-table-body">
-                                    @foreach ($siswa as $item)
-                                        <tr>
-                                            <td>{{ $item->nama_siswa }}</td>
-                                            <td>{{ $item->kelompok_umur }}</td>
-                                            <td>{{ $item->jenis_kelamin }}</td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                            <form action="{{ route('admin.storeJadwal') }}" method="POST"
+                                enctype="multipart/form-data">
+                                @csrf
+                                <div class="mb-3">
+                                    <label for="hari_tanding" class="form-label">Hari Tanding</label>
+                                    <input type="text" name="hari_tanding" id="hari_tanding" class="form-control"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="tanggal_tanding" class="form-label">Tanggal Tanding</label>
+                                    <input type="date" name="tanggal_tanding" id="tanggal_tanding"
+                                        class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="nama_kompetisi" class="form-label">Nama Kompetisi</label>
+                                    <input type="text" name="nama_kompetisi" id="nama_kompetisi" class="form-control"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="logo_tim_a" class="form-label">Logo Tim A</label>
+                                    <input type="file" name="logo_tim_a" id="logo_tim_a" class="form-control"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="logo_tim_b" class="form-label">Logo Tim B</label>
+                                    <input type="file" name="logo_tim_b" id="logo_tim_b" class="form-control"
+                                        required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Tambah Jadwal</button>
+                            </form>
                         </div>
                     </div>
+
+
+
                 </div>
             </main>
             @include('admin.body.footer')
